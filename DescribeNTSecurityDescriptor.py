@@ -2491,7 +2491,7 @@ class HumanDescriber(object):
             "GENERIC_READ": "Generic Read"
         }
         rights = []
-        access_flags = list(AccessMaskFlags(ace.mask.AccessMask))
+        access_flags = [flag for flag in AccessMaskFlags if flag & ace.mask.AccessMask.value]
         for flag in access_flags:
             rights.append(mapping[flag.name])
         
