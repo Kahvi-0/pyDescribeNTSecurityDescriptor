@@ -10,8 +10,9 @@ from enum import Enum, IntFlag
 import io
 import ldap3
 from ldap3.protocol.formatters.formatters import format_sid
-from sectools.windows.ldap import raw_ldap_query, init_ldap_session
-from sectools.windows.crypto import nt_hash, parse_lm_nt_hashes
+#from sectools.windows.ldap import raw_ldap_query, init_ldap_session
+#from sectools.windows.crypto import nt_hash, parse_lm_nt_hashes
+import sectools
 import os
 import random
 import re
